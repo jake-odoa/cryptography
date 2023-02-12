@@ -111,7 +111,7 @@ jobs:
         if: matrix.PYTHON.OPENSSL
       - name: Build toxenv
         run: |
-            tox -vvv --notest
+            tox --notest
         env:
           TOXENV: ${{ matrix.PYTHON.TOXENV }}
           CARGO_TARGET_DIR: ${{ format('{0}/src/rust/target/', github.workspace) }}
